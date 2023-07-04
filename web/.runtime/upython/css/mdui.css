@@ -1,0 +1,8 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.mdui-theme-primary-indigo.mdui-theme-accent-pink .mdui-color-theme {
+    background-color: #f48fb1 !important;
+}
