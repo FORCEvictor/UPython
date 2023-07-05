@@ -1,3 +1,55 @@
+Blockly.Blocks['custom_exec'] = {
+    init: function() {
+        this.appendValueInput("PARAM")
+            .setCheck("String")
+            .appendField("执行代码");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+    }
+};
+
+Blockly.Python['custom_exec'] = function(block) {
+    var param = Blockly.Python.valueToCode(block, 'PARAM', Blockly.Python.ORDER_ATOMIC);
+    var code = 'exec(' + param + ')\n';
+    return code;
+};
+
+Blockly.Blocks['custom_exec_string'] = {
+    init: function() {
+        this.appendValueInput("PARAM")
+            .setCheck("String")
+            .appendField("执行代码");
+        this.setOutput(true, 'String');
+        this.setColour(230);
+    }
+};
+
+Blockly.Python['custom_exec_string'] = function(block) {
+    var param = Blockly.Python.valueToCode(block, 'PARAM', Blockly.Python.ORDER_ATOMIC);
+    var code = 'exec(' + param + ')';
+    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+Blockly.Blocks['custom_exec_boolean'] = {
+    init: function() {
+        this.appendValueInput("PARAM")
+            .setCheck("String")
+            .appendField("执行代码");
+        this.setOutput(true, 'Boolean');
+        this.setColour(230);
+    }
+};
+
+Blockly.Python['custom_exec_boolean'] = function(block) {
+    var param = Blockly.Python.valueToCode(block, 'PARAM', Blockly.Python.ORDER_ATOMIC);
+    var code = 'bool(exec(' + param + '))';
+    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+
+
 const toolbox = {
     "kind": "categoryToolbox",
     "contents": [
@@ -11,7 +63,10 @@ const toolbox = {
                 { "kind": "block", "type": "logic_negate" },
                 { "kind": "block", "type": "logic_boolean" },
                 { "kind": "block", "type": "logic_null" },
-                { "kind": "block", "type": "logic_ternary" }
+                { "kind": "block", "type": "logic_ternary" },
+                { "kind": "block", "type": "custom_exec" },
+                { "kind": "block", "type": "custom_exec_string" },
+                { "kind": "block", "type": "custom_exec_boolean" }
             ]
         },
         {
@@ -88,11 +143,15 @@ const toolbox = {
             "name": "函数",
             "contents": [
                 { "kind": "block", "type": "procedures_defnoreturn" },
-                { "kind": "block", "type": "procedures_callnoreturn" }
+                { "kind": "block", "type": "procedures_defreturn" },
+                { "kind": "block", "type": "procedures_ifreturn" },
+                { "kind": "block", "type": "procedures_callnoreturn" },
+                { "kind": "block", "type": "procedures_callreturn" }
             ]
         }
     ]
 }
+
 function exportBlocks() {
     var json = 'Blockly.serialization.workspaces.save(workspace);';
     var blob = new Blob([json], { type: 'text/json' });
