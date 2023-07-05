@@ -31,25 +31,6 @@ Blockly.Python['custom_exec_string'] = function(block) {
     return [code, Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
-Blockly.Blocks['custom_exec_boolean'] = {
-    init: function() {
-        this.appendValueInput("PARAM")
-            .setCheck("String")
-            .appendField("执行代码");
-        this.setOutput(true, 'Boolean');
-        this.setColour(230);
-    }
-};
-
-Blockly.Python['custom_exec_boolean'] = function(block) {
-    var param = Blockly.Python.valueToCode(block, 'PARAM', Blockly.Python.ORDER_ATOMIC);
-    var code = 'bool(exec(' + param + '))';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
-};
-
-
-
-
 const toolbox = {
     "kind": "categoryToolbox",
     "contents": [
@@ -63,13 +44,17 @@ const toolbox = {
                 { "kind": "block", "type": "logic_negate" },
                 { "kind": "block", "type": "logic_boolean" },
                 { "kind": "block", "type": "logic_null" },
-                { "kind": "block", "type": "logic_ternary" },
-                { "kind": "block", "type": "custom_exec" },
-                { "kind": "block", "type": "custom_exec_string" },
-                { "kind": "block", "type": "custom_exec_boolean" }
+                { "kind": "block", "type": "logic_ternary" }
             ]
-        },
-        {
+        },{
+            "kind": "category",
+            "name": "代码",
+            "contents": [
+
+                { "kind": "block", "type": "custom_exec" },
+                { "kind": "block", "type": "custom_exec_string" }
+            ]
+        },{
             "kind": "category",
             "name": "循环",
             "contents": [
