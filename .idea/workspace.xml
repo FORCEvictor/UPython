@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b882aec1-bf00-4ea6-9687-7ec3a1ceb5e5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.runtime/upython/js/blockly.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/.runtime/upython/js/blockly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688373592919</updated>
       <workItem from="1688373594132" duration="21554000" />
-      <workItem from="1688522966041" duration="2475000" />
+      <workItem from="1688522966041" duration="4528000" />
     </task>
     <servers />
   </component>
