@@ -1,3 +1,4 @@
+
 Blockly.Blocks['custom_exec'] = {
     init: function() {
         this.appendValueInput("PARAM")
@@ -185,4 +186,8 @@ function resizeBlocklyArea() {
     var blocklyHeight = browserHeight * 0.7;
     document.getElementById('blocklyDiv').style.height = blocklyHeight + 'px';
     Blockly.svgResize(workspace);
+}
+
+function openAssist() {
+    window.open("http://127.0.0.1:5000/webapp/upython/is_open/",'_blank');
 }

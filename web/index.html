@@ -3,29 +3,90 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>uPython V2.2 正式版本</title>
-    <link rel="stylesheet" href="/.runtime/mdui/css/mdui.min.css">
+    <title>uPython V2.3 - Preview</title>
+    <link rel="stylesheet" href="/.runtime/mdui/css/mdui.css">
     <link rel="stylesheet" href="/.runtime/upython/css/mdui.css">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="https://unpkg.com/blockly/python_compressed.js"></script>
     <script src="https://unpkg.com/blockly/msg/zh-hans.js"></script>
-    <script src="/.runtime/mdui/js/mdui.min.js"></script>
+
 </head>
 
 <body class="mdui-theme-primary-indigo mdui-theme-accent-indigo">
-<div id="blocklyDiv" style="width: 100%;"></div>
-
-<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme"
-        onclick="document.getElementById('textareaDiv').style.height = document.getElementById('textareaDiv').style.height == '100px' ? '0' : '100px'">
-    展开/隐藏代码预览
+<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="exportBlocks()">
+    导出积木块文件
 </button>
-<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme" onclick="exportBlocks()">导出积木块列表</button>
-<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme" onclick="importBlocks()">导入积木块列表</button>
-<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme" onclick="exportPython()">导出Python代码</button>
-<div id="textareaDiv" style="height: 0px; width: 100%; overflow: hidden; transition: height 0.3s;">
-    <textarea id="textarea" style="height: 100%; width: 100%; background-color: #ffffff; color: #000000;"></textarea>
+<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="importBlocks()">
+    导入积木块文件
+</button>
+<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="exportPython()">
+    导出 PYTHON 文件
+</button>
+<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="openAssist()">
+    初始化 UASSIST 应用程序
+</button>
+<button class="mdui-btn-raised mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
+    更新日志
+</button>
+<button class="mdui-btn-raised mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
+    已知Bug
+</button>
+<div class="mdui-dialog" id="example-1">
+    <div class="mdui-dialog-title">已知Bug</div>
+    <div class="mdui-dialog-content">
+        <div class="mdui-table-fluid">
+            <div class="mdui-table-fluid">
+                <table class="mdui-table .mdui-table-hoverable">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>描述</th>
+                        <th>等级</th>
+                        <th>优先级</th>
+                        <th>修复难度</th>
+                        <th>负责人</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>无法导入积木块</td>
+                        <td>严重</td>
+                        <td>不紧急</td>
+                        <td>较难修复</td>
+                        <td>@FORCEvictor</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Blockly 工作区与代码展示区无法自适应屏幕高度</td>
+                        <td>较为严重</td>
+                        <td>不紧急</td>
+                        <td>较难修复</td>
+                        <td>@FORCEvictor</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            如果你还知道更多Bug，欢迎通过Issue告诉我们，这对我们的开发工作十分有帮助。
+        </div>
+    </div>
+    <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
+    </div>
+</div>
+
+<div class="mdui-tab mdui-tab-full-width" mdui-tab>
+    <a href="#index-tab-1" class="mdui-ripple">web</a>
+    <a href="#index-tab-2" class="mdui-ripple">code</a>
+  </div>
+
+
+<div id="index-tab-1"><div id="blocklyDiv" style="width: 100%; height: 50%;"></div></div>
+<div id="index-tab-2">
+    <textarea id="textarea" style="height: 50%; width: 100%; background-color: #ffffff; color: #000000;"></textarea>
 </div>
 <script src=".runtime/upython/js/blockly.js"></script>
+<script src="/.runtime/mdui/js/mdui.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,0 @@
-    Windows Registry Editor Version 5.00
-    
-    [HKEY_CURRENT_USER\Software\Classes\UAssist]
-    "URL Protocol"
-    @="URL:uassist_applink"
-    
-    [HKEY_CURRENT_USER\Software\Classes\postman\shell\open\command]
-    @="\"_App_Url" \"%1\""
