@@ -7,7 +7,7 @@
 ## 1. 使用 UPython
 1. 如果您需要使用增强功能：
 
-    1. 在Github内找到`desktop/安装包`文件夹，下载内部的`setup.exe`文件。
+    1. 在Github内找到`desktop/Setup`文件夹，下载内部的`setup.exe`文件。
 
     2. 打开`setup.exe`文件，按流程进行安装。
 
