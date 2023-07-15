@@ -13,15 +13,23 @@
 </head>
 
 <body class="mdui-theme-primary-indigo mdui-theme-accent-indigo">
-<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="exportBlocks()">
-    导出积木块文件
-</button>
-<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="importBlocks()">
-    导入积木块文件
-</button>
-<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="exportPython()">
-    导出 PYTHON 文件
-</button>
+<div class="mdui-row-xs-2">
+    <div class="mdui-col">
+        <button class="mdui-btn-block mdui-ripple mdui-color-theme mdui-btn" onclick="exportBlocks()">
+            导出积木块文件
+        </button>
+    </div>
+    <!--
+    <button class="mdui-btn-block mdui-ripple mdui-color-theme mdui-btn" onclick="importBlocks()">
+        导入积木块文件
+    </button>
+    -->
+    <div class="mdui-col">
+        <button class="mdui-btn-block mdui-ripple mdui-color-theme mdui-btn" onclick="exportPython()">
+            导出 PYTHON 文件
+        </button>
+    </div>
+</div>
 <div class="mdui-dialog" id="example-1">
     <div class="mdui-dialog-title">已知Bug</div>
     <div class="mdui-dialog-content">
@@ -65,25 +73,32 @@
         <button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
     </div>
 </div>
-
-<div class="mdui-tab mdui-tab-full-width" mdui-tab>
+<br>
+<div class="mdui-tab mdui-tab-full-width mdui-color-theme" mdui-tab>
     <a href="#index-tab-1" class="mdui-ripple">web</a>
     <a href="#index-tab-2" class="mdui-ripple">code</a>
     <a href="#index-tab-3" class="mdui-ripple">menu</a>
-  </div>
+    <a href="#index-tab-4" class="mdui-ripple">download code to system</a>
+</div>
 
 
 <div id="index-tab-1"><div id="blocklyDiv" style="width: 100%; height: 50%;"></div></div>
 <div id="index-tab-2">
-    <textarea id="textarea" style="height: 50%; width: 100%; background-color: #ffffff; color: #000000;"></textarea>
+    <div class="mdui-textfield mdui-textfield-floating-label">
+        <label class="mdui-textfield-label">CODES</label>
+        <textarea id="textarea" class="mdui-textfield-input" style="weight: 100%"></textarea>
+    </div>
 </div>
 <div id="index-tab-3">
-    <button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="openAssist()">
+    <button class="mdui-btn-block mdui-ripple mdui-color-theme mdui-btn" onclick="openAssist()">
         初始化 UASSIST 应用程序
     </button>
-    <button class="mdui-btn-raised mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
+    <button class="mdui-btn-block mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
         已知Bug
     </button>
+</div>
+<div id="index-tab-4">
+    暂不开放
 </div>
 <script src=".runtime/upython/js/blockly.js"></script>
 <script src="/.runtime/mdui/js/mdui.js"></script>

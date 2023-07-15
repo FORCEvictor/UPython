@@ -173,6 +173,7 @@ function exportPython() {
 function updateCode() {
     var pythonCode = Blockly.Python.workspaceToCode(workspace);
     document.getElementById('textarea').value = pythonCode;
+    mdui.updateTextFields(document.getElementById('textarea'))
 }
 
 
