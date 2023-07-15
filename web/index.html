@@ -22,12 +22,6 @@
 <button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="exportPython()">
     导出 PYTHON 文件
 </button>
-<button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="openAssist()">
-    初始化 UASSIST 应用程序
-</button>
-<button class="mdui-btn-raised mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
-    已知Bug
-</button>
 <div class="mdui-dialog" id="example-1">
     <div class="mdui-dialog-title">已知Bug</div>
     <div class="mdui-dialog-content">
@@ -49,7 +43,7 @@
                         <td>1</td>
                         <td>无法导入积木块</td>
                         <td>严重</td>
-                        <td>不紧急</td>
+                        <td>较为紧急</td>
                         <td>较难修复</td>
                         <td>@FORCEvictor</td>
                     </tr>
@@ -75,12 +69,21 @@
 <div class="mdui-tab mdui-tab-full-width" mdui-tab>
     <a href="#index-tab-1" class="mdui-ripple">web</a>
     <a href="#index-tab-2" class="mdui-ripple">code</a>
+    <a href="#index-tab-3" class="mdui-ripple">menu</a>
   </div>
 
 
 <div id="index-tab-1"><div id="blocklyDiv" style="width: 100%; height: 50%;"></div></div>
 <div id="index-tab-2">
     <textarea id="textarea" style="height: 50%; width: 100%; background-color: #ffffff; color: #000000;"></textarea>
+</div>
+<div id="index-tab-3">
+    <button class="mdui-btn-raised mdui-ripple mdui-color-theme mdui-btn" onclick="openAssist()">
+        初始化 UASSIST 应用程序
+    </button>
+    <button class="mdui-btn-raised mdui-color-theme mdui-ripple mdui-btn" mdui-dialog="{target: '#example-1'}">
+        已知Bug
+    </button>
 </div>
 <script src=".runtime/upython/js/blockly.js"></script>
 <script src="/.runtime/mdui/js/mdui.js"></script>
