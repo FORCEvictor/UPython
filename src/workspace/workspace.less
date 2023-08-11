@@ -1,0 +1,110 @@
+/* 样式保护 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+}
+
+/* 隐藏浏览器滚动条 */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+/* 注入样式 */
+#blocklyDiv {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.blocklySvg {
+  background: var(--workspace-background);
+}
+
+#toolbox {
+  display: none;
+}
+
+/* 下拉菜单 */
+.blocklyMenu {
+  border-radius: 4px;
+}
+
+.blocklyMenuItem {
+  padding: 0 12px;
+
+  font-size: 14px;
+  line-height: 36px;
+  color: var(--blockly-dropdown-color) !important;
+
+  border-radius: 0;
+
+  transition: background 0.2s;
+}
+
+.blocklyMenuItemDisabled {
+  color: var(--blockly-dropdown-color) !important;
+  opacity: 0.5;
+}
+
+.blocklyMenuItem:nth-child(1) {
+  border-radius: 4px 4px 0 0;
+}
+
+.blocklyMenuItem:nth-last-child(1) {
+  border-radius: 0 0 4px 4px;
+}
+
+.blocklyContextMenu > .blocklyMenuItem:not(.blocklyMenuItemDisabled):hover {
+  background: var(--toolbox-category-background-hover);
+}
+
+.blocklyWidgetDiv .blocklyMenu {
+  padding: 0;
+  background: var(--blockly-dropdown-background);
+  border: 0;
+  box-shadow: 0 4px 10px var(--blockly-shadow) !important;
+}
+
+.blocklyWidgetDiv .blocklyMenu:hover {
+  box-shadow: 0 4px 10px var(--blockly-shadow) !important;
+}
+
+.blocklyDropDownDiv {
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px var(--blockly-shadow) !important;
+}
+
+.blocklyMainWorkspaceScrollbar {
+  z-index: 8;
+}
+
+/* 颜色弹出框 */
+.fieldColourSlider {
+  height: 16px;
+}
+
+.fieldColourSliderContainer {
+  padding: 14px 12px 12px;
+}
+
+.fieldColourSliderLabel {
+  padding: 0 8px;
+}
+
+.codemao-renderer.codemao-theme.blocklyDropDownDiv .goog-menuitem-content {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blocklyMenuItemSelected .blocklyMenuItemCheckbox {
+  position: absolute;
+}

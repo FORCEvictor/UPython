@@ -1,0 +1,69 @@
+@font-face {
+  font-family: JetBrainsMono;
+  font-display: swap;
+  src: url("JetBrainsMono.ttf");
+}
+
+#codespace {
+  user-select: none;
+
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+
+  overflow: scroll;
+  display: block;
+
+  width: 0;
+  height: 100%;
+
+  background: var(--codespace-background);
+}
+
+pre {
+  margin: 0;
+  padding: 0 1em;
+  background: transparent;
+}
+
+#code {
+  user-select: text;
+
+  padding: 1em !important;
+
+  font-family: JetBrainsMono, sans-serif;
+  font-size: 14px;
+  line-height: 1.414;
+
+  background: transparent;
+}
+
+#code::selection {
+  color: inherit;
+  background: #1ba2e333;
+}
+
+#code > span::selection {
+  color: inherit;
+  background: #1ba2e333;
+}
+
+#codespaceHead {
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+}
+
+#codespaceClose {
+  cursor: pointer;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 20px;
+  height: 20px;
+
+  color: var(--color-text-1);
+}

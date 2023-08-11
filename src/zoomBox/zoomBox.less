@@ -1,0 +1,85 @@
+.blocklyZoom,
+.blocklyTrash {
+  display: block;
+  opacity: 0;
+}
+
+.blocklyBlockCanvas {
+  transition: scale 0.5s;
+}
+
+#zoomBox {
+  position: absolute;
+  z-index: 9;
+  right: 40px;
+  bottom: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 275px;
+  height: 45px;
+
+  color: var(--zoombox-color);
+
+  background: var(--zoombox-background);
+  backdrop-filter: blur(5px) saturate(200%);
+  border: 1px solid rgb(5 5 5 / 8%);
+  border-radius: 77px;
+}
+
+.zoomFunctions {
+  height: 25px;
+  vertical-align: middle;
+}
+
+#switchThemeDay {
+  display: none;
+}
+
+#switchThemeNight {
+  display: block;
+}
+
+#zoomBoxSeparate {
+  width: 2px;
+  height: 30px;
+  background-color: var(--boxy-color);
+}
+
+#zoomBoxReset {
+  user-select: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button:has(#zoomBoxReset) {
+  width: 64px;
+}
+
+.arco-trigger-arrow.hide-arrow {
+  display: none;
+}
+
+.arco-tooltip-content.zoomBox-tip {
+  background-color: rgb(0 0 0 / 40%);
+  border-radius: 6px;
+}
+
+#zoomBox .arco-btn {
+  cursor: pointer;
+  line-height: 0;
+  color: var(--zoombox-color);
+}
+
+#zoomBox .arco-divider-vertical {
+  height: 2em;
+}
+
+#zoomBox .arco-btn-icon {
+  font-size: 24px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}

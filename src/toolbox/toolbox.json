@@ -1,0 +1,239 @@
+{
+  "kind": "categoryToolbox",
+  "contents": [
+    {
+      "kind": "category",
+      "name": "控制",
+      "categorystyle": "controller",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "controls_if"
+        },
+        {
+          "kind": "block",
+          "type": "controls_if",
+          "extraState": {
+            "hasElse": true
+          }
+        },
+        {
+          "kind": "sep",
+          "gap": "64"
+        },
+        {
+          "kind": "block",
+          "type": "controls_whileUntil"
+        },
+        {
+          "kind": "block",
+          "type": "controls_repeat_ext",
+          "inputs": {
+            "TIMES": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 1
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "controls_forever"
+        },
+        {
+          "kind": "block",
+          "type": "controls_for",
+          "inputs": {
+            "FROM": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 1
+                }
+              }
+            },
+            "TO": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 10
+                }
+              }
+            },
+            "BY": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 1
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "controls_flow_statements"
+        },
+        {
+          "kind": "sep",
+          "gap": "64"
+        },
+        {
+          "kind": "block",
+          "type": "logic_ternary"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "name": "逻辑",
+      "categorystyle": "calculation",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "math_number",
+          "fields": {
+            "NUM": 0
+          }
+        },
+        {
+          "kind": "block",
+          "type": "math_arithmetic",
+          "inputs": {
+            "A": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 0
+                }
+              }
+            },
+            "B": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "math_random_int",
+          "inputs": {
+            "FROM": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 0
+                }
+              }
+            },
+            "TO": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 5
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "sep",
+          "gap": "64"
+        },
+        {
+          "kind": "block",
+          "type": "math_round"
+        },
+        {
+          "kind": "block",
+          "type": "math_single"
+        },
+        {
+          "kind": "block",
+          "type": "math_modulo"
+        },
+        {
+          "kind": "block",
+          "type": "math_trig"
+        },
+        {
+          "kind": "sep",
+          "gap": "64"
+        },
+        {
+          "kind": "block",
+          "type": "math_evenly_divisible",
+          "inputs": {
+            "DIVIDEND": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 9
+                }
+              }
+            },
+            "DIVISOR": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "math_number_property"
+        },
+        {
+          "kind": "sep",
+          "gap": "64"
+        },
+        {
+          "kind": "block",
+          "type": "logic_compare"
+        },
+        {
+          "kind": "block",
+          "type": "logic_operation"
+        },
+        {
+          "kind": "block",
+          "type": "logic_negate"
+        },
+        {
+          "kind": "block",
+          "type": "logic_boolean"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "name": "变量",
+      "categorystyle": "variable",
+      "custom": "VARIABLE",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "variables_set"
+        },
+        {
+          "kind": "block",
+          "type": "math_change"
+        },
+        {
+          "kind": "block",
+          "type": "variables_get"
+        }
+      ]
+    }
+  ]
+}

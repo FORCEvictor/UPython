@@ -1,20 +1,102 @@
-# UPython
+<!--suppress HtmlDeprecatedAttribute -->
+<p align="center">
+   <br>
+   <img width="100" src="./src/icon/logo/boxy.svg" alt="UPython-logo"/>
+</p>
 
-UPython是一个基于Google Blockly的Python/Micropython编辑器，旨在为编程初学者和儿童提供一个友好而直观的编程环境。无论您是想学习Python编程还是Micropython，UPython都是您的理想选择。
+<h1 align="center">
+   UPython
+</h1>
 
-## 特点
+<div align="center">
 
-- **可视化编程**：UPython提供了一个简洁直观的用户界面，使用图形化的编程块。通过将预定义的编程块拖放到工作区，您可以轻松构建代码逻辑和算法。这种可视化编程方式不仅减少了语法错误的可能性，还帮助用户理解程序的结构和逻辑。
+[![star](https://img.shields.io/github/stars/FORCEvictor/UPython.svg?style=social&label=Star&theme=dark)](https://github.com/FORCEvictor/UPython/stargazers)
+[![fork](https://img.shields.io/github/forks/FORCEvictor/UPython.svg?style=social&label=Fork&theme=dark)](https://github.com/FORCEvictor/UPython/network/members)
 
-- **支持Python和Micropython**：UPython支持Python和Micropython的语法和函数库，使您可以编写各种应用程序，包括机器人控制、物联网设备、传感器应用等。您可以使用内置的代码编辑器查看和编辑生成的Python或Micropython代码，进一步提升您的编程技能。
+</div>
 
-- **跨平台**：UPython被设计为跨平台工具，您可以在各种设备上使用，包括电脑、平板电脑和移动设备。无论您身在何处，只要有网络连接，您就可以随时随地进行编程学习和实践。
+#### 介绍
 
-## 开始使用
-1. 在线使用
+UPython 是 Google Blockly 的一个应用实例，
+其能是您快速开发一个Python应用。
+其基于 Boxy 程式。
 
-下载UPython包，并打开desktop目录内的安装包文件夹，双击setup.exe安装UAssist。
+#### 安装
 
-打开下方网站，开始编程。
+1. **环境检查： 确保你的电脑已经安装了最新版本的 Node.js。**
+   UPython 是纯客户端 Web 应用，
+   仅使用 Node.js 进行自动化处理。
 
-http://block.um-js.com/
+2. **克隆仓库：将本仓库克隆到本地。**
+
+   ```
+   git clone https://github.com/FORCEvictor/UPython.git
+   ```
+
+3. **环境配置：配置本地开发环境。**
+
+   ```
+   cd UPython
+   ```
+
+   ```
+   npm install
+   ```
+
+4. **开发服务：启动 Vite 本地开发服务。**
+   构建采用开发模式，支持热重载。
+
+   ```
+   npm start
+   ```
+
+#### 开发
+
+- **构建：基于 Vite 构建。**
+
+  - 开发模式：源映射及 DevServer 支持。
+
+    ```
+    npm start
+    ```
+
+  - 生产模式：文件压缩及 PWA 生成。
+
+    ```
+    npm run build
+    ```
+
+- **服务：启动 http-server 本地服务。**
+  使用
+
+  ```
+  npm run preview
+  ```
+
+- **格式化：标准化项目文件。**
+  请在 `commit` 前运行以保证符合代码规范。
+
+  ```
+  npm run lint
+  ```
+
+#### 贡献
+
+想让 UPython 变得更好吗？
+我们欢迎以拉取请求、错误报告、讨论等形式对 UPython 做出贡献！
+
+#### 版本
+
+UPython 即将发布稳定版本，将使用[语义化版本控制](https://semver.org/)。
+稳定版本更新频率会极低，仅保留必要的 Bug 修改，以保证你稳定的后续开发。
+
+#### 许可证
+
+UPython 采用 [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html) 开源协议。
+
+#### 致谢
+
+- [Google Blockly](https://github.com/google/blockly)
+- [Icon Park](https://iconpark.oceanengine.com/)
+- [Arco Design](https://arco.design/)
+- Boxy

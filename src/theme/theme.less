@@ -1,0 +1,49 @@
+@import url("@arco-themes/vue-boxy/theme.less");
+
+* {
+  transition: background 0.3s ease;
+}
+
+:root[mode="light"] {
+  --boxy-color: @primary-6;
+  --boxy-tone: invert(0);
+  --blockly-dropdown-color: @color-text-1;
+  --blockly-dropdown-background: @color-bg-3;
+  --blockly-shadow: #0000001a;
+  --codespace-background: @color-bg-3;
+  --search-color: @color-text-2;
+  --search-background: @color-bg-3;
+  --toolbox-color: @color-text-1;
+  --toolbox-background: @color-bg-3;
+  --toolbox-category-background-hover: #dcdcdc55;
+  --toolbox-category-color-selected: #000;
+  --toolbox-category-background-selected: #e9eef2;
+  --trashcan-background: #0005;
+  --workspace-background: @gray-1;
+  --zoombox-color: @color-text-1;
+  --zoombox-background: @color-bg-3;
+  --button-background: @primary-6;
+  --button-background-hover: @primary-5;
+}
+
+:root[mode="dark"] {
+  --boxy-color: @dark-primary-6;
+  --boxy-tone: invert(1);
+  --blockly-dropdown-color: @dark-color-text-1;
+  --blockly-dropdown-background: @dark-color-bg-3;
+  --blockly-shadow: #0000001a;
+  --codespace-background: @dark-color-bg-3;
+  --search-color: @dark-color-text-2;
+  --search-background: @dark-color-bg-3;
+  --toolbox-color: @dark-color-text-1;
+  --toolbox-background: @dark-color-bg-3;
+  --toolbox-category-background-hover: #fff3;
+  --toolbox-category-color-selected: #fff;
+  --toolbox-category-background-selected: #fff6;
+  --trashcan-background: #001f2540;
+  --workspace-background: @dark-color-bg-1;
+  --zoombox-color: @dark-color-text-1;
+  --zoombox-background: @dark-color-bg-3;
+  --button-background: @dark-primary-6;
+  --button-background-hover: @dark-primary-5;
+}

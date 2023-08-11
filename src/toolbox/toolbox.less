@@ -1,0 +1,83 @@
+/* 积木栏设置 */
+.blocklyToolboxDiv {
+  z-index: 4;
+  top: 60px;
+
+  width: 60px;
+  padding: 0;
+
+  background: var(--toolbox-background);
+}
+
+.blocklyFlyoutBackground {
+  fill: var(--toolbox-background);
+  fill-opacity: 1;
+}
+
+.blocklyFlyout {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-260px, 0);
+
+  overflow: hidden;
+  display: block !important;
+
+  //width: 320px;
+  max-width: calc(100% - 60px);
+  height: 100vh;
+
+  background: var(--toolbox-background);
+  //box-shadow: rgb(0 0 0 / 10%) 0 4px 4px 0;
+  border-right: 1px solid rgb(5 5 5 / 8%);
+
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.5s;
+}
+
+.blocklyFlyoutButtonShadow {
+  display: none;
+}
+
+.blocklyTreeLabel {
+  padding: 3px 0;
+
+  font: 13px sans-serif !important;
+  color: var(--toolbox-color);
+  text-align: center;
+  white-space: pre-line;
+}
+
+.blocklyTreeRow {
+  height: initial;
+  margin: 0 4px;
+  padding: 0 !important;
+  border-radius: 4px;
+}
+
+.blocklyTreeRow:not(.blocklyTreeSelected):hover {
+  background-color: var(--toolbox-category-background-hover);
+}
+
+/* 设置积木全显 */
+//.blocklyFlyout:hover {
+////  overflow: visible;
+////}
+
+.blocklyTreeRowContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px 0 6px;
+}
+
+#boxy > .blocklyDiv > div > svg.blocklyScrollbarVertical.blocklyFlyoutScrollbar {
+  display: none;
+}
+
+.blocklyFlyoutButton {
+  cursor: pointer;
+  fill: var(--button-background);
+}
+
+.blocklyFlyoutButton:hover {
+  fill: var(--button-background-hover);
+}

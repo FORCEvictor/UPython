@@ -1,0 +1,46 @@
+#trashcan {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+
+  width: 60px;
+  height: 100%;
+
+  opacity: 0;
+  background-color: var(--trashcan-background);
+  backdrop-filter: blur(12px) saturate(145%);
+
+  transition: opacity 0.2s, z-index 0.2s;
+}
+
+.trashcan {
+  user-select: none;
+
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 15px;
+
+  width: 30px;
+
+  opacity: 0;
+
+  transition: opacity 0.5s;
+}
+
+#trashcan-lid {
+  position: absolute;
+  left: 12px;
+
+  width: 36px;
+  margin-top: -42px;
+
+  transition: transform 0.3s cubic-bezier(0.1, 1, 0.5, 1), opacity 0.3s cubic-bezier(0.1, 1, 0.5, 1);
+}
+
+#trashcan-body {
+  position: absolute;
+  left: 15px;
+  width: 30px;
+  margin-top: -30px;
+}
