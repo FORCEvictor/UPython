@@ -10,6 +10,7 @@
         <a-doption @click="open_file">打开本地文件</a-doption>
         <a-divider margin="1px" />
         <a-doption @click="more_opinion">更多选项</a-doption>
+        <a-doption @click="open_feedback_link">提交反馈</a-doption>
       </div>
     </template>
   </a-trigger>
@@ -158,10 +159,12 @@ const open_file = () => {
   };
 };
 /**
- * 打开文档
+ * 打开Feedback
  */
-const open_doc = () => {
-  window.open("https://www.yuque.com/hzsn/boxy");
+const open_feedback_link = () => {
+  window.open(
+    "https://forms.office.com/Pages/ResponsePage.aspx?id=muagBYpBwUecJZOHJhv5kSlCl4hKd3pOjyIkb7-eC_dUN0I5SzY5MUw3SVNCUTNFQzU3RE5UNTEzTC4u"
+  );
 };
 </script>
 
