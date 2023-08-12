@@ -10,7 +10,7 @@
         <a-doption @click="open_file">打开本地文件</a-doption>
         <a-divider margin="1px" />
         <a-doption @click="more_opinion">更多选项</a-doption>
-        <a-doption @click="open_feedback_link">提交反馈</a-doption>
+        <a-doption @click="open_feedback_link">使用文档</a-doption>
       </div>
     </template>
   </a-trigger>
@@ -163,7 +163,7 @@ const open_file = () => {
  */
 const open_feedback_link = () => {
   window.open(
-    "https://forms.office.com/Pages/ResponsePage.aspx?id=muagBYpBwUecJZOHJhv5kSlCl4hKd3pOjyIkb7-eC_dUN0I5SzY5MUw3SVNCUTNFQzU3RE5UNTEzTC4u"
+    "https://schoolsnsw-my.sharepoint.com/:w:/g/personal/victor_zhang212_education_nsw_gov_au/ESN32Ri6_s1BorWY9ApNS3kBfmcjv5N0M24bJdQC5yqyBA?e=JH9vUT"
   );
 };
 </script>
