@@ -18,7 +18,7 @@
 #### 介绍
 
 UPython 是 Google Blockly 的一个应用实例，
-其能是您快速开发一个Python应用。
+其能是您快速开发一个 Python 应用。
 其基于 Boxy 程式。
 
 #### 安装
@@ -84,6 +84,7 @@ UPython 是 Google Blockly 的一个应用实例，
 
 想让 UPython 变得更好吗？
 我们欢迎以拉取请求、错误报告、讨论等形式对 UPython 做出贡献！
+你也可以[提交反馈](https://forms.office.com/r/tCD6D0zMvW)或提交Issue来让我们注意到你的问题！
 
 #### 版本
 
