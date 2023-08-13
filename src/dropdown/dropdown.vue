@@ -10,7 +10,7 @@
         <a-doption @click="open_file">打开本地文件</a-doption>
         <a-divider margin="1px" />
         <a-doption @click="more_opinion">更多选项</a-doption>
-        <a-doption @click="open_feedback_link">使用文档</a-doption>
+        <a-doption @click="open_feedback_link">官方网站</a-doption>
       </div>
     </template>
   </a-trigger>
@@ -104,10 +104,10 @@ switch_theme();
 function switch_theme() {
   localStorage.setItem("theme", theme_value.value);
   switch (theme_value.value) {
-    case "亮色模式":
+    case "白昼模式":
       Theme.switch("light");
       break;
-    case "暗黑模式":
+    case "黑暗模式":
       Theme.switch("dark");
       break;
     default:
@@ -162,9 +162,7 @@ const open_file = () => {
  * 打开Feedback
  */
 const open_feedback_link = () => {
-  window.open(
-    "https://schoolsnsw-my.sharepoint.com/:w:/g/personal/victor_zhang212_education_nsw_gov_au/ESN32Ri6_s1BorWY9ApNS3kBfmcjv5N0M24bJdQC5yqyBA?e=JH9vUT"
-  );
+  window.open("https://site.python.ublock.um-js.com/");
 };
 </script>
 
